@@ -94,11 +94,12 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
+                            android:src="@drawable/ic_woman_hair_cut"
                             app:civ_border_color="@color/circular_pic_border"
                             app:civ_border_width="1dp" />
                         <!--                        android:src="@drawable/man"-->
@@ -126,11 +127,12 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image1"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
+                            android:src="@drawable/ic_sauna"
                             app:civ_border_color="@color/circular_pic_border"
                             app:civ_border_width="1dp" />
 
@@ -158,11 +160,12 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_imag2"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
+                            android:src="@drawable/ic_male_hair_salon"
                             app:civ_border_color="@color/circular_pic_border"
                             app:civ_border_width="1dp" />
 
@@ -190,13 +193,13 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image3"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
+                            android:src="@drawable/ic_relaxing_procedure"
+                            />
 
                         <!--                        android:src="@drawable/sports"-->
 
@@ -220,7 +223,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -229,14 +233,13 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image4"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_air_conditioner"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
+                            />
 
                         <!--                        -->
 
@@ -261,13 +264,13 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image5"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="#5f707070"
-                            app:civ_border_width="2dp" />
+                            android:src="@drawable/ic_appliance"
+                            />
                         <!-- android:src="@drawable/girl"-->
 
 
@@ -279,7 +282,7 @@
                             android:layout_marginBottom="10dp"
                             android:fontFamily="sans-serif-medium"
                             android:gravity="center"
-                            android:text="Womens Wear"
+                            android:text="@string/appliances_repair"
                             android:textColor="@color/black"
                             android:textSize="12sp" />
 
@@ -292,13 +295,13 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_imag6"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="#5f707070"
-                            app:civ_border_width="2dp" />
+                            android:src="@drawable/ic_painter_roller"
+                         />
                         <!--                    android:src="@drawable/ring"-->
 
 
@@ -311,7 +314,7 @@
                             android:fontFamily="sans-serif-medium"
                             android:gravity="center"
 
-                            android:text="Jewellery"
+                            android:text="@string/painter"
                             android:textColor="@color/black"
                             android:textSize="12sp" />
 
@@ -324,13 +327,13 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image7"
                             android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_height="36dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="#5f707070"
-                            app:civ_border_width="2dp" />
+                            android:src="@drawable/ic_cleaning_spray"
+                           />
                         <!--                    android:src="@drawable/sports"-->
 
 
@@ -342,7 +345,7 @@
                             android:layout_marginBottom="10dp"
                             android:fontFamily="sans-serif-medium"
                             android:gravity="center"
-                            android:text="Sports"
+                            android:text="@string/cleaning_disinfection"
                             android:textColor="@color/black"
                             android:textSize="12sp" />
 
@@ -353,7 +356,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginHorizontal="16dp">
+                    android:layout_marginHorizontal="16dp"
+                    android:baselineAligned="false">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -364,13 +368,12 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image9"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
+                             />
                         <!--                        android:src="@drawable/man"-->
 
 
@@ -396,13 +399,12 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image10"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
+                             />
 
                         <!--                        android:src="@drawable/girl"-->
 
@@ -428,13 +430,12 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image11"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
+                            />
 
                         <!--                       android:src="@drawable/ring"-->
 
@@ -460,13 +461,12 @@
                         android:orientation="vertical">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/profile_image12"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
+                           />
 
                         <!--                        android:src="@drawable/sports"-->
 

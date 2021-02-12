@@ -7,4 +7,7 @@
     <string name="men_massage">Massage for Men</string>
     <string name="ac_service"><![CDATA[AC Service & Repair]]></string>
     <string name="selected_location">selected location</string>
+    <string name="appliances_repair">Appliances Repair</string>
+    <string name="painter">Painter</string>
+    <string name="cleaning_disinfection"><![CDATA[Cleaning & Disinfection]]></string>
 </resources>
