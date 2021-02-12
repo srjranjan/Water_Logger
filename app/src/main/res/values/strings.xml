@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Water Logger</string>
+    <string name="already_have_an_account_click_here_to">Already have an account? Click here to</string>
+    <string name="women_salon">Salon for Women</string>
+    <string name="women_massage">Massage for Women</string>
+    <string name="men_salon">Salon for Men</string>
+    <string name="men_massage">Massage for Men</string>
+    <string name="ac_service"><![CDATA[AC Service & Repair]]></string>
+    <string name="selected_location">selected location</string>
 </resources>
