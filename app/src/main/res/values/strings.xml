@@ -1,13 +1,20 @@
 <resources>
     <string name="app_name">Water Logger</string>
     <string name="already_have_an_account_click_here_to">Already have an account? Click here to</string>
-    <string name="women_salon">Salon for Women</string>
-    <string name="women_massage">Massage for Women</string>
-    <string name="men_salon">Salon for Men</string>
-    <string name="men_massage">Massage for Men</string>
+    <string name="women_salon">Salon Women</string>
+    <string name="women_massage">Spa Women</string>
+    <string name="men_salon">Salon Men</string>
+    <string name="men_massage">Spa Men</string>
     <string name="ac_service"><![CDATA[AC Service & Repair]]></string>
-    <string name="selected_location">selected location</string>
+    <string name="selected_location">Jugsalai police station,Jamshedpur,Jharkhand,India </string>
     <string name="appliances_repair">Appliances Repair</string>
     <string name="painter">Painter</string>
     <string name="cleaning_disinfection"><![CDATA[Cleaning & Disinfection]]></string>
+    <string name="best_offers">Best Offers</string>
+    <string name="search">Search for Services and packages</string>
+    <string name="electrician">Electrician</string>
+    <string name="carpenters">Carpenters</string>
+    <string name="pest_control">Pest Control</string>
+    <string name="plumbers">Plumbers</string>
+    <string name="best_offers_subheading"><![CDATA[Hygienic & Single-use products | low-contact services]]></string>
 </resources>

@@ -1,67 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
 
-    <ScrollView
-
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/activity_bg"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/black"
-                android:orientation="horizontal"
-                android:paddingLeft="32dp"
-                android:paddingTop="5dp"
-                android:paddingRight="32dp"
-                android:paddingBottom="5dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:padding="8dp">
 
-                <androidx.appcompat.widget.AppCompatImageView
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/pin" />
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/pin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/dashboard_location"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/dashboardLocationTextview"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="32dp"
                     android:text="@string/selected_location"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageView"
+                    app:layout_constraintTop_toTopOf="@id/imageView" />
 
-                <androidx.appcompat.widget.AppCompatSpinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp" />
-            </LinearLayout>
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:autofillHints=""
+                    android:background="#FFFFFF"
+                    android:drawableStart="@drawable/ic__search_24"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/search"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <FrameLayout
-                android:id="@+id/FrameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <androidx.viewpager.widget.ViewPager
+                <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewpager"
                     android:layout_width="match_parent"
-                    android:layout_height="190dp" />
+                    android:layout_height="150dp">
 
-                <me.relex.circleindicator.CircleIndicator
+                </androidx.viewpager2.widget.ViewPager2>
+
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/indicator"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -70,425 +95,536 @@
                     app:ci_drawable_unselected="@drawable/ic_circular"
                     app:ci_height="5dp"
                     app:ci_width="5dp" />
+
+
             </FrameLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="vertical">
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp">
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/women_haircut"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginHorizontal="16dp">
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ac_repair"
+                    app:layout_constraintEnd_toStartOf="@+id/women_massage"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:layout_marginStart="0dp"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image"
+                            android:id="@+id/women_salon_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
                             android:src="@drawable/ic_woman_hair_cut"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
-                        <!--                        android:src="@drawable/man"-->
-
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
                             android:text="@string/women_salon"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/women_salon_image"
+                            app:layout_constraintStart_toStartOf="@id/women_salon_image"
+                            app:layout_constraintTop_toBottomOf="@id/women_salon_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/women_massage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/women_haircut"
+                    app:layout_constraintEnd_toStartOf="@+id/men_salon"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/women_haircut"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image1"
+                            android:id="@+id/women_massage_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
                             android:src="@drawable/ic_sauna"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
-
-                        <!--                        android:src="@drawable/girl"-->
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
                             android:text="@string/women_massage"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/women_massage_image"
+                            app:layout_constraintStart_toStartOf="@id/women_massage_image"
+                            app:layout_constraintTop_toBottomOf="@id/women_massage_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/men_salon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintEnd_toStartOf="@+id/men_massage"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/women_massage"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_imag2"
+                            android:id="@+id/men_salon_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
                             android:src="@drawable/ic_male_hair_salon"
-                            app:civ_border_color="@color/circular_pic_border"
-                            app:civ_border_width="1dp" />
-
-                        <!--                       android:src="@drawable/ring"-->
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
                             android:text="@string/men_salon"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/men_salon_image"
+                            app:layout_constraintStart_toStartOf="@id/men_salon_image"
+                            app:layout_constraintTop_toBottomOf="@id/men_salon_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/men_massage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/men_salon"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image3"
+                            android:id="@+id/men_massage_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
                             android:src="@drawable/ic_relaxing_procedure"
-                            />
-
-                        <!--                        android:src="@drawable/sports"-->
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
                             android:text="@string/men_massage"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/men_massage_image"
+                            app:layout_constraintStart_toStartOf="@id/men_massage_image"
+                            app:layout_constraintTop_toBottomOf="@id/men_massage_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ac_repair"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false">
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/electrician_card"
+                    app:layout_constraintEnd_toStartOf="@+id/appliances_repair_card"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/women_haircut">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image4"
+                            android:id="@+id/ac_repair_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_air_conditioner"
-                            />
-
-                        <!--                        -->
+                            android:src="@drawable/ic_woman_hair_cut"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
                             android:text="@string/ac_service"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/ac_repair_image"
+                            app:layout_constraintStart_toStartOf="@id/ac_repair_image"
+                            app:layout_constraintTop_toBottomOf="@id/ac_repair_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/appliances_repair_card"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ac_repair"
+                    app:layout_constraintEnd_toStartOf="@+id/painter_card"
+                    app:layout_constraintStart_toEndOf="@+id/ac_repair"
+                    app:layout_constraintTop_toBottomOf="@+id/women_massage">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image5"
+                            android:id="@+id/appliances_repair_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_appliance"
-                            />
-                        <!-- android:src="@drawable/girl"-->
+                            android:src="@drawable/ic_sauna"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-
-                        <TextView
-                            android:layout_width="match_parent"
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
                             android:text="@string/appliances_repair"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/appliances_repair_image"
+                            app:layout_constraintStart_toStartOf="@id/appliances_repair_image"
+                            app:layout_constraintTop_toBottomOf="@id/appliances_repair_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/painter_card"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginEnd="12dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cleaning_card"
+                    app:layout_constraintEnd_toEndOf="@id/cleaning_card"
+                    app:layout_constraintStart_toEndOf="@+id/appliances_repair_card"
+                    app:layout_constraintTop_toBottomOf="@+id/men_salon">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_imag6"
+                            android:id="@+id/painter_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_painter_roller"
-                         />
-                        <!--                    android:src="@drawable/ring"-->
+                            android:src="@drawable/ic_male_hair_salon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-
-                        <TextView
-                            android:layout_width="match_parent"
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
-
                             android:text="@string/painter"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/painter_image"
+                            app:layout_constraintStart_toStartOf="@id/painter_image"
+                            app:layout_constraintTop_toBottomOf="@id/painter_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image7"
-                            android:layout_width="50dp"
-                            android:layout_height="36dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_cleaning_spray"
-                           />
-                        <!--                    android:src="@drawable/sports"-->
-
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
-                            android:text="@string/cleaning_disinfection"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cleaning_card"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginHorizontal="16dp"
-                    android:baselineAligned="false">
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/pest_control_card"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/painter_card"
+                    app:layout_constraintTop_toBottomOf="@+id/men_massage">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:layout_marginStart="0dp"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image9"
+                            android:id="@+id/cleaning_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
-                             />
-                        <!--                        android:src="@drawable/man"-->
-
+                            android:src="@drawable/ic_relaxing_procedure"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
-                            android:text="@string/women_salon"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:text="@string/cleaning_disinfection"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/cleaning_image"
+                            app:layout_constraintStart_toStartOf="@id/cleaning_image"
+                            app:layout_constraintTop_toBottomOf="@id/cleaning_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/electrician_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/plumber_card"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ac_repair">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image10"
+                            android:id="@+id/electrician_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
-                             />
-
-                        <!--                        android:src="@drawable/girl"-->
+                            android:src="@drawable/ic_woman_hair_cut"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
-                            android:text="@string/women_massage"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:text="@string/electrician"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/electrician_image"
+                            app:layout_constraintStart_toStartOf="@id/electrician_image"
+                            app:layout_constraintTop_toBottomOf="@id/electrician_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/plumber_card"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="@id/electrician_card"
+                    app:layout_constraintEnd_toStartOf="@+id/carpenter_card"
+                    app:layout_constraintStart_toEndOf="@+id/electrician_card"
+                    app:layout_constraintTop_toBottomOf="@+id/appliances_repair_card">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image11"
+                            android:id="@+id/plumber_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            />
-
-                        <!--                       android:src="@drawable/ring"-->
+                            android:src="@drawable/ic_sauna"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
-                            android:text="@string/men_salon"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:text="@string/plumbers"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/plumber_image"
+                            app:layout_constraintStart_toStartOf="@id/plumber_image"
+                            app:layout_constraintTop_toBottomOf="@id/plumber_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/carpenter_card"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/pest_control_card"
+                    app:layout_constraintStart_toEndOf="@id/plumber_card"
+                    app:layout_constraintTop_toBottomOf="@id/painter_card">
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/profile_image12"
+                            android:id="@+id/carpenter_image"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
-                           />
-
-                        <!--                        android:src="@drawable/sports"-->
+                            android:src="@drawable/ic_male_hair_salon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:gravity="center"
-                            android:text="@string/men_massage"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:text="@string/carpenters"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/carpenter_image"
+                            app:layout_constraintStart_toStartOf="@id/carpenter_image"
+                            app:layout_constraintTop_toBottomOf="@id/carpenter_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/pest_control_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    app:cardBackgroundColor="@color/cardview_light_background"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/carpenter_card"
+                    app:layout_constraintTop_toBottomOf="@+id/cleaning_card">
 
-                </LinearLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
 
-            </LinearLayout>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/pest_control_image"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_relaxing_procedure"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pest_control"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/pest_control_image"
+                            app:layout_constraintStart_toStartOf="@id/pest_control_image"
+                            app:layout_constraintTop_toBottomOf="@id/pest_control_image" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-    </ScrollView>
 
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18.5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/best_offers"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-</LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18.5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/best_offers_subheading"
+            android:textColor="@color/hint"
+            android:textSize="13sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

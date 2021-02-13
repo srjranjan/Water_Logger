@@ -7,5 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="circular_pic_border">#5f707070</color>
+    <color name="activity_bg">#f6f6f6</color>
+    <color name="view_line">#9f9e9e</color>
+    <color name="hint">#808080</color>
+    <color name="textcolor">#000000</color>
+
+
 </resources>
