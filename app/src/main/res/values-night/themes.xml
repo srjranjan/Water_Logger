@@ -15,8 +15,9 @@
         <!-- Customize your theme here. -->
         <item name="android:textColorHint">@color/hint</item>
 
-        <item name="editTextColor">@color/textcolor</item>
-        <item name="android:textColor">@color/textcolor</item>
-        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+        <item name="editTextColor">#000000</item>
+        <item name="android:textColor">@color/nighttextcolor</item>
+        <item name="cardBackgroundColor">@color/black</item>
+
     </style>
 </resources>
