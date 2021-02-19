@@ -17,7 +17,7 @@
 
         <item name="editTextColor">#000000</item>
         <item name="android:textColor">@color/nighttextcolor</item>
-        <item name="cardBackgroundColor">@color/black</item>
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
 
     </style>
 </resources>

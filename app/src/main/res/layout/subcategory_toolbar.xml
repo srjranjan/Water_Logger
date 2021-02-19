@@ -25,15 +25,11 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="" />
+<androidx.appcompat.widget.AppCompatSpinner
+    android:layout_width="24dp"
+    android:layout_height="10dp"
+    android:layout_gravity="end|center"
+    android:gravity="center"
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|center"
-        android:layout_marginEnd="23.5dp"
-        android:gravity="end"
-
-        android:src="@drawable/ic__search_24" />
-
+    />
 </com.google.android.material.appbar.MaterialToolbar>
